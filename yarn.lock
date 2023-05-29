@@ -2329,10 +2329,10 @@ domutils@^3.0.1:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
-dprint@^0.35.1:
-  version "0.35.4"
-  resolved "https://registry.yarnpkg.com/dprint/-/dprint-0.35.4.tgz#e6160dd49665a8c45550336a72dc140ef10abd3c"
-  integrity sha512-bCfS1kjmNgCWZ6/TQzcyz30jQpQ8/yHe7cN04cL9VRnC3AgtAyfXPMafYuR5ALNbndwkK/mEJ+Nh+Ec4lFjszA==
+dprint@^0.36.1:
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/dprint/-/dprint-0.36.1.tgz#5272a8ba3912172ee3bac82adfcb0c5d70fe875d"
+  integrity sha512-F8TaWlieYtJc4ktqr0tjNwg/HN4wNPTU6rTq29MdoIKXi9gQmh7Ibqr0oyW1hsLpqBuAXjjwEYIos9plYkwENQ==
   dependencies:
     https-proxy-agent "=5.0.1"
     yauzl "=2.10.0"
