@@ -1,0 +1,21 @@
+name: v1
+properties:
+  schema:
+    description: Schema identifier
+    type: "'v1'"
+    required: true
+  name:
+    description: Preset name
+    type: string
+    required: true
+  description:
+    description: Preset description
+    type: string
+    required: true
+  author:
+    description: Preset author
+    type: string
+    required: true
+  with:
+    description: Preset options
+    type: unknown{}

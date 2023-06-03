@@ -1,0 +1,14 @@
+name: Continuous integration (presets)
+
+on:
+  pull_request:
+    branches: [ presets ]
+
+jobs:
+
+  test:
+    name: Test
+    uses: nextlinux/profiler/.github/workflows/test.presets.yml@master
+    with:
+      ref: ${{ github.event.pull_request.head.ref }}
+      repo: ${{ github.event.pull_request.head.repo.full_name }}
