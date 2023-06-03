@@ -1,2 +1,2 @@
 # profiler
-Presets from [profiler/profiler](https://github.com/profiler/profiler)!
+Presets from [nextlinux/profiler](https://github.com/nextlinux/profiler)!
