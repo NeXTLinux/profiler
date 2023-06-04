@@ -84,7 +84,7 @@
     "svgo": "^3.0.2",
     "type-check": "^0.4.0",
     "vue": "^2.7.1",
-    "vue-prism-component": "^1.2.0",
+    "vue-prism-component": "^2.0.0",
     "wrap-ansi": "^8.0.0",
     "xml-formatter": "^3.3.2"
   },
