@@ -57,7 +57,7 @@
     "express-rate-limit": "^6.7.0",
     "file-type": "^18.2.1",
     "got": "^12.6.1",
-    "htmlparser2": "^8.0.2",
+    "htmlparser2": "^9.0.0",
     "js-yaml": "^4.1.0",
     "jsdom": "^22.1.0",
     "json": "^11.0.0",
