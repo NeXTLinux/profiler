@@ -69,7 +69,7 @@
     "ms": "^2.1.2",
     "node-fetch": "^3.3.1",
     "nodemon": "^2.0.22",
-    "open-graph-scraper": "^5.2.3",
+    "open-graph-scraper": "^6.0.1",
     "pac-proxy-agent": "^6.0.3",
     "png-js": "^1.0.0",
     "postcss": "^8.4.23",

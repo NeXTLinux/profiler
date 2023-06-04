@@ -2875,7 +2875,7 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-got@^12.6.0, got@^12.6.1:
+got@^12.6.1:
   version "12.6.1"
   resolved "https://registry.npmjs.org/got/-/got-12.6.1.tgz"
   integrity sha512-mThBblvlAF1d4O5oqyvN+ZxLAYwIJK7bpMxgYqPD9okW0C3qm5FFn7k811QrcuEBwaogR3ngOFoCfs6mRv7teQ==
@@ -3020,7 +3020,7 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-iconv-lite@0.6, iconv-lite@0.6.3, iconv-lite@^0.6.3:
+iconv-lite@0.6, iconv-lite@0.6.3:
   version "0.6.3"
   resolved "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz"
   integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
@@ -4101,15 +4101,13 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-open-graph-scraper@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.npmjs.org/open-graph-scraper/-/open-graph-scraper-5.2.3.tgz"
-  integrity sha512-OFKyI3Zv60onbwjUtwTdLwMB9P1O0+U2JV0HD4hHdwyKGwDhyM09udZVU5vEwe/PxI4MyPuVaxcdy1okc4SgWw==
+open-graph-scraper@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/open-graph-scraper/-/open-graph-scraper-6.0.1.tgz#26e1e39920a1490009ea88635d4f3b430774a4d8"
+  integrity sha512-xyBxn72mrQO4r0z4CywlcA1/WpI9ouhX1IurDEWQ0BNsowdumwRUK5AB1PQaaWXziqwhIaVVMttC/5hGbH/uOg==
   dependencies:
     chardet "^1.5.1"
     cheerio "^1.0.0-rc.12"
-    got "^12.6.0"
-    iconv-lite "^0.6.3"
     validator "^13.9.0"
 
 optionator@^0.8.1:
