@@ -2,7 +2,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.achievements.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_achievements: yes
     plugin_achievements_only: sponsor, maintainer, octonaut
@@ -13,7 +13,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.achievements.compact.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_achievements: yes
     plugin_achievements_only: polyglot, stargazer, sponsor, deployer, member, maintainer, developer, scripter, packager, explorer, infographile, manager

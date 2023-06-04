@@ -23,7 +23,7 @@
 </table>
 <!--/header-->
 
-This template can be used to a *markdown template file* with data gathered by profiler.
+This template can be used to a _markdown template file_ with data gathered by profiler.
 
 Since the resulting output is a markdown file, it is possible to do additional formatting such as creating hyperlinks and adding custom texts.
 
@@ -31,18 +31,21 @@ Since the resulting output is a markdown file, it is possible to do additional f
 
 The templating engine is [EJS](https://github.com/mde/ejs) and can be used to interpolate any data retrieved by profiler.
 
-* `<%=` and `%>` are used to display escaped output
-  * `{{` and `}}` is also supported as syntactic sugar
-* `<%-` and `%>` are used to display raw output
-* `<%` and `%>` are used to execute JavaScript, and can also contains control statements such as conditionals and loops
+- `<%=` and `%>` are used to display escaped output
+  - `{{` and `}}` is also supported as syntactic sugar
+- `<%-` and `%>` are used to display raw output
+- `<%` and `%>` are used to execute JavaScript, and can also contains control statements such as conditionals and loops
 
-*Example: basic templating*
+_Example: basic templating_
+
 ```markdown
 <!-- template -->
+
 I joined GitHub on `{{ f.date(REGISTRATION_DATE, {date:true}) }}`.
 I contributed to `{{ REPOSITORIES_CONTRIBUTED_TO }}` repositories and made `{{ COMMITS }}` commits.
 
 <!-- render -->
+
 I joined GitHub on `20 Oct 2016`.
 I contributed to `37` repositories and made `5947` commits.
 ```
@@ -53,7 +56,8 @@ Any data fetched by profiler and exposed formatting helpers can be used.
 
 It also means that to access plugins data they must be enabled and configured beforehand.
 
-*Example: enabling `plugin_activity` exposes `plugins.activity` data*
+_Example: enabling `plugin_activity` exposes `plugins.activity` data_
+
 ```yml
 - uses: nextlinux/profiler@latest
   with:
@@ -69,20 +73,22 @@ A few properties are aliased in [/source/templates/markdown/template.mjs](/sourc
 
 Use `config_output: json` to dump all available data for a given configuration. Power users can also directly read [profiler source code](https://github.com/nextlinux/profiler) to know what is exposed.
 
-For a quick overview, it is also possible to use [profiler.lecoq.io/{username}?config.output=json](https://profiler.lecoq.io).
+For a quick overview, it is also possible to use [profiler.next-linux.systems/{username}?config.output=json](https://profiler.next-linux.systems).
 
-> 💡 Note however that [profiler.lecoq.io](https://profiler.lecoq.io) has a caching system which may prevent any new result.
+> 💡 Note however that [profiler.next-linux.systems](https://profiler.next-linux.systems) has a caching system which may prevent any new result.
 
 ## 🧩 Plugins with markdown version
 
 Several plugins have a markdown version which provides better usability, usually with hyperlinks and better text formatting.
 
-*Example: using `✒️ posts` plugin markdown version*
+_Example: using `✒️ posts` plugin markdown version_
+
 ```ejs
 <%- await include(`partials/posts.ejs`) %>
 ```
 
 **[✒️ Recent posts from dev.to](https://dev.to/nextlinux)**
+
 <table>
   <tr>
     <td rowspan="2" width="280">
@@ -117,11 +123,14 @@ These renders will automatically be pushed to `markdown_cache` folder and includ
 ```
 
 The `embed()` function takes two arguments:
+
 1. An unique file identifier (which will be used to store render in `${markdown_cache}/${file_identifier}`)
 2. Configuration options
-  - Note that `token` options are automatically passed down from overall configuration, do not pass them again (especially in clear) in it
 
-*Example: embed a `🈷️ languages` SVG render*
+- Note that `token` options are automatically passed down from overall configuration, do not pass them again (especially in clear) in it
+
+_Example: embed a `🈷️ languages` SVG render_
+
 ```ejs
 <%- await embed(`example-languages-pdf`, {languages:true, languages_details:"percentage, bytes-size", config_display:"large"}) %>
 ```
@@ -144,7 +153,7 @@ with:
   markdown: >-
     https://raw.githubusercontent.com/nextlinux/profiler/examples/profiler.markdown.template.md
   config_output: markdown
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 ```yaml
@@ -177,7 +186,7 @@ with:
   plugin_topics_limit: 24
   plugin_isocalendar: yes
   plugin_languages: yes
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 ```yaml
@@ -195,7 +204,7 @@ with:
   plugin_isocalendar: yes
   config_twemoji: yes
   config_padding: 5%
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 <!--/examples-->

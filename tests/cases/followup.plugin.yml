@@ -1,14 +1,14 @@
 - name: 🎟️ Follow-up of issues and pull requests - Opened on user's repositories
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_followup: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🎟️ Follow-up of issues and pull requests - Opened by user
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_followup: 'yes'
     plugin_followup_sections: user
     use_mocked_data: 'yes'
@@ -16,7 +16,7 @@
 - name: 🎟️ Follow-up of issues and pull requests - Indepth analysis
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_followup: 'yes'
     plugin_followup_indepth: 'yes'
     use_mocked_data: 'yes'
@@ -24,7 +24,7 @@
 - name: 🎟️ Follow-up of issues and pull requests - Exclude Archived
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_followup: 'yes'
     plugin_followup_archived: 'no'
     use_mocked_data: 'yes'

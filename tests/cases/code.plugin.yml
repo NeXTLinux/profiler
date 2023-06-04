@@ -1,7 +1,7 @@
 - name: ♐ Random code snippet - JavaScript or TypeScript snippet of the day
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_code: 'yes'
     plugin_code_languages: javascript, typescript
     plugin_code_load: 400

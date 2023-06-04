@@ -1,7 +1,7 @@
 - name: Licenses and permissions
   with:
     filename: profiler.plugin.licenses.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     template: repository
     repo: profiler
@@ -16,7 +16,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.licenses.ratio.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     template: repository
     repo: profiler

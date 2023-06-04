@@ -1,7 +1,7 @@
 - name: Using a community template
   uses: nextlinux/profiler@latest
   with:
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     template: "@classic"
     setup_community_templates: "nextlinux/profiler@master:classic"
   test:
@@ -11,7 +11,7 @@
 - name: Using a trusted community template
   uses: nextlinux/profiler@latest
   with:
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     template: "@terminal"
     setup_community_templates: "nextlinux/profiler@master:terminal+trust"
   test:

@@ -1,7 +1,7 @@
 - name: 💕 GitHub Sponsors - Sponsors goal
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_sponsors: 'yes'
     plugin_sponsors_sections: goal, list
     plugin_sponsors_past: 'yes'
@@ -10,7 +10,7 @@
 - name: 💕 GitHub Sponsors - Sponsors introduction
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_sponsors: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'

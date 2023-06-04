@@ -3,14 +3,14 @@
   with:
     filename: profiler.organization.svg
     user: github
-    token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+    token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
     base: header, repositories
 
 - name: Large display
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.large.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     config_display: large
 
 - name: JSON profiler
@@ -18,7 +18,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.example.json
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     config_output: json
 
 - name: PNG profiler
@@ -26,7 +26,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.example.png
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     config_output: png
 
 - name: profiler insights
@@ -34,14 +34,14 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.insights.html
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     config_output: insights
 
 - name: Presets
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.presets.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: header, repositories
     config_presets: https://raw.githubusercontent.com/nextlinux/profiler/presets/lunar-red/preset.yaml
   prod:
@@ -54,7 +54,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.error.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_projects: yes
   prod:

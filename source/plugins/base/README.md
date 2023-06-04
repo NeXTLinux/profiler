@@ -48,8 +48,7 @@
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
 <b>default:</b> header, activity, community, repositories, metadata<br>
@@ -70,8 +69,7 @@ This currently improves the accuracy of the following statistics:</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-🌐 Web instances must configure <code>settings.json</code>:
+    <td nowrap="nowrap">🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.api.github.overuse</i></li>
 </ul>
@@ -85,8 +83,7 @@ This currently improves the accuracy of the following statistics:</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -100,8 +97,7 @@ Only use this option when using a plugin that can be configured with <a href="/s
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -112,8 +108,7 @@ Only use this option when using a plugin that can be configured with <a href="/s
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥)</i>
 <br>
@@ -127,8 +122,7 @@ This setting may not be supported by all plugins.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(1 ≤
 𝑥
 ≤ 100)</i>
@@ -141,8 +135,7 @@ This setting may not be supported by all plugins.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -160,8 +153,7 @@ Broad affiliations will result in less representative profiler.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
 <b>default:</b> owner<br>
@@ -174,7 +166,6 @@ Broad affiliations will result in less representative profiler.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(newline-separated)</i>
 <br></td>
@@ -187,7 +178,6 @@ Broad affiliations will result in less representative profiler.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
@@ -202,7 +192,6 @@ Broad affiliations will result in less representative profiler.</p>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
 ⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
@@ -219,7 +208,7 @@ name: Default profiler
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.base.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: header, activity, community, repositories, metadata
 
 ```

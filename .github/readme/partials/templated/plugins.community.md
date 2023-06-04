@@ -334,7 +334,7 @@ It uses the same syntax as GitHub action and looks like below:
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.{name}.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_{name}: yes
   prod:

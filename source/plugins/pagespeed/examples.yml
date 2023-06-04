@@ -6,7 +6,7 @@
     base: ""
     plugin_pagespeed: yes
     plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
 
 - name: Detailed report
   uses: nextlinux/profiler@latest
@@ -17,7 +17,7 @@
     plugin_pagespeed: yes
     plugin_pagespeed_detailed: yes
     plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
 
 - name: Screenshot
   uses: nextlinux/profiler@latest
@@ -28,7 +28,7 @@
     plugin_pagespeed: yes
     plugin_pagespeed_screenshot: yes
     plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
 
 - name: Succinct report with PWA
   uses: nextlinux/profiler@latest
@@ -38,7 +38,7 @@
     base: ""
     plugin_pagespeed: yes
     plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
     plugin_pagespeed_pwa: yes
   prod:
     skip: true

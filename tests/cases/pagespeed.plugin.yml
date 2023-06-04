@@ -4,7 +4,7 @@
     token: NOT_NEEDED
     plugin_pagespeed: 'yes'
     plugin_pagespeed_token: MOCKED_TOKEN
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ⏱️ Google PageSpeed - Detailed report
@@ -14,7 +14,7 @@
     plugin_pagespeed: 'yes'
     plugin_pagespeed_detailed: 'yes'
     plugin_pagespeed_token: MOCKED_TOKEN
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ⏱️ Google PageSpeed - Screenshot
@@ -24,7 +24,7 @@
     plugin_pagespeed: 'yes'
     plugin_pagespeed_screenshot: 'yes'
     plugin_pagespeed_token: MOCKED_TOKEN
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ⏱️ Google PageSpeed - Succinct report with PWA
@@ -33,7 +33,7 @@
     token: NOT_NEEDED
     plugin_pagespeed: 'yes'
     plugin_pagespeed_token: MOCKED_TOKEN
-    plugin_pagespeed_url: https://lecoq.io
+    plugin_pagespeed_url: https://next-linux.systems
     plugin_pagespeed_pwa: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'

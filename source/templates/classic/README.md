@@ -32,7 +32,7 @@ name: Example
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.classic.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: header, repositories
   plugin_lines: yes
 

@@ -3,7 +3,7 @@
   with:
     template: repository
     filename: profiler.repository.svg
-    token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+    token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
     user: nextlinux
     repo: profiler
     plugin_lines: yes

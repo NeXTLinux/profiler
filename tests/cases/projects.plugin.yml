@@ -1,7 +1,7 @@
 - name: 🗂️ GitHub projects - Project from a repository
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_projects: 'yes'
     plugin_projects_repositories: nextlinux/profiler/projects/1
     plugin_projects_descriptions: 'yes'

@@ -5,7 +5,7 @@
     filename: profiler.markdown.md
     markdown: https://raw.githubusercontent.com/nextlinux/profiler/examples/profiler.markdown.template.md
     config_output: markdown
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
   prod:
     with:
       output_action: commit
@@ -39,7 +39,7 @@
     plugin_topics_limit: 24
     plugin_isocalendar: yes
     plugin_languages: yes
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
   prod:
     with:
       output_action: commit
@@ -58,7 +58,7 @@
     plugin_isocalendar: yes
     config_twemoji: yes
     config_padding: 5%
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
   prod:
     with:
       output_action: commit

@@ -1,7 +1,7 @@
 - name: 🎭 Comment reactions - Comment reactions
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_reactions: 'yes'
     plugin_reactions_limit: 100
     plugin_reactions_details: percentage

@@ -1,7 +1,7 @@
 - name: 💬 Discussions - GitHub Discussions
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_discussions: 'yes'
     plugin_discussions_categories_limit: 8
     use_mocked_data: 'yes'

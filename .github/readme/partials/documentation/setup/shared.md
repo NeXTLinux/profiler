@@ -1,6 +1,6 @@
 # 💕 Using the shared instance (~1 min)
 
-For convenience, a free shared instance is available at [profiler.lecoq.io](https://profiler.lecoq.io) without any additional setup.
+For convenience, a free shared instance is available at [profiler.next-linux.systems](https://profiler.next-linux.systems) without any additional setup.
 
 ## 0️ Setup a personal repository
 
@@ -16,14 +16,14 @@ Its `README.md` will be displayed on your user profile:
 
 ## 2️ Configure _profiler_
 
-Visit [profiler.lecoq.io](https://profiler.lecoq.io) and start playing around!
+Visit [profiler.next-linux.systems](https://profiler.next-linux.systems) and start playing around!
 
 > ⚠️ Some plugins are not available on the web instance. Consider using [GitHub action](https://github.com/marketplace/actions/profiler-embed) to enjoy all features!
 
-> ℹ️ [profiler.lecoq.io](https://profiler.lecoq.io) always run on [latest release](https://github.com/nextlinux/profiler/releases/latest). To test upcoming releases, use [beta-profiler.lecoq.io](https://beta-profiler.lecoq.io), which always run on `@master` instead.
+> ℹ️ [profiler.next-linux.systems](https://profiler.next-linux.systems) always run on [latest release](https://github.com/nextlinux/profiler/releases/latest). To test upcoming releases, use [beta-profiler.next-linux.systems](https://beta-profiler.next-linux.systems), which always run on `@master` instead.
 
-![profiler.lecoq.io](/.github/readme/imgs/setup_shared.light.png#gh-light-mode-only)
-![profiler.lecoq.io](/.github/readme/imgs/setup_shared.dark.png#gh-dark-mode-only)
+![profiler.next-linux.systems](/.github/readme/imgs/setup_shared.light.png#gh-light-mode-only)
+![profiler.next-linux.systems](/.github/readme/imgs/setup_shared.dark.png#gh-dark-mode-only)
 
 > ⚠️ This service is hosted on a small server that I rent. It is provided free of charge so please be gentle with it 😅 Availability not guaranteed!
 
@@ -36,7 +36,7 @@ Update profile `README.md` to include rendered image.
 _Example: add rendered image with markdown_
 
 ```markdown
-![profiler](https://profiler.lecoq.io/username)
+![profiler](https://profiler.next-linux.systems/username)
 ```
 
-> ⚠️ Images are cached for 1 hour after being rendered. They **won't be updated** during this time window when queried again. However it is possible to manually update them by using [profiler.lecoq.io](https://profiler.lecoq.io) again
+> ⚠️ Images are cached for 1 hour after being rendered. They **won't be updated** during this time window when queried again. However it is possible to manually update them by using [profiler.next-linux.systems](https://profiler.next-linux.systems) again

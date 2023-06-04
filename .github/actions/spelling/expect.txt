@@ -161,7 +161,7 @@ largeable
 lastfm
 lastname
 leaderboard
-lecoq
+next-linux
 legoandmars
 libgconf
 libssl
@@ -374,3 +374,5 @@ ytmusic
 Zabcdefghijklmnopqrstuvwxyz
 zenhei
 zenorocha
+nextlinux
+

@@ -1,7 +1,7 @@
 - name: 🙋 Introduction - Organization introduction
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     user: github
     base: header
     plugin_introduction: 'yes'
@@ -10,7 +10,7 @@
 - name: 🙋 Introduction - Repository introduction
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     template: repository
     repo: profiler
     base: header

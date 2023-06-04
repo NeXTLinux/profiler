@@ -96,8 +96,8 @@ Generate profiler that can be embedded everywhere, including your GitHub profile
     <th colspan="2"><h2>🦑 Try it now!</h2></th>
   </tr>
   <tr>
-    <th><a href="https://profiler.lecoq.io/embed">📊 profiler embed</a></th>
-    <th><a href="https://profiler.lecoq.io/insights">✨ profiler insights</a></th>
+    <th><a href="https://profiler.next-linux.systems/embed">📊 profiler embed</a></th>
+    <th><a href="https://profiler.next-linux.systems/insights">✨ profiler insights</a></th>
   </tr>
   <tr>
     <td align="center">
@@ -113,7 +113,7 @@ Generate profiler that can be embedded everywhere, including your GitHub profile
   </tr>
   <tr>
     <td align="center" colspan="2">
-      Test latest features and patches on <code><a href="https://beta-profiler.lecoq.io">🧪 profiler beta</a></code>!
+      Test latest features and patches on <code><a href="https://beta-profiler.next-linux.systems">🧪 profiler beta</a></code>!
     </td>
   </tr>
   <tr>

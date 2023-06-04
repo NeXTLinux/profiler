@@ -2,9 +2,9 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.traffic.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: repositories
     plugin_traffic: yes
   prod:
     with:
-      token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+      token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}

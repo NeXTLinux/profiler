@@ -10,7 +10,7 @@ jobs:
     name: Flag stale issues and pull requests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v6
+      - uses: actions/stale@v8
         with:
           days-before-stale: -1
           stale-pr-message: This pull request seems to be inactive and will be automatically closed in a few days if it remains without any activity.

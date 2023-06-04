@@ -40,8 +40,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -55,8 +54,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br></td>
   </tr>
   <tr>
@@ -66,7 +64,6 @@ Some repositories may not be able to reported advanced stats and in the case the
   </tr>
   <tr>
     <td nowrap="nowrap">⏩ Inherits <code>repositories_skipped</code><br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(newline-separated)</i>
 <br></td>
@@ -82,8 +79,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> organization<br>
 <b>allowed values:</b><ul><li>all</li><li>organization</li><li>user</li></ul></td>
@@ -95,8 +91,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -106,8 +101,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-🌐 Web instances must configure <code>settings.json</code>:
+    <td nowrap="nowrap">🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.api.github.overuse</i></li>
 </ul>
@@ -127,8 +121,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
 <b>default:</b> commit<br>
@@ -140,8 +133,7 @@ Some repositories may not be able to reported advanced stats and in the case the
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -164,7 +156,7 @@ name: Contributions
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.notable.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: ""
   plugin_notable: yes
 
@@ -174,7 +166,7 @@ name: Indepth analysis
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.notable.indepth.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: ""
   plugin_notable: yes
   plugin_notable_indepth: yes

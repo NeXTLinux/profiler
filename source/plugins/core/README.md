@@ -498,7 +498,6 @@ When doing so, any settings which defaults on user fetched values will not be te
   <tr>
     <td nowrap="nowrap">✔️ Required<br>
 🔐 Token<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>token</code>
 <br></td>
   </tr>
@@ -510,7 +509,6 @@ When doing so, any settings which defaults on user fetched values will not be te
   </tr>
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -522,7 +520,6 @@ When doing so, any settings which defaults on user fetched values will not be te
   </tr>
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -537,7 +534,6 @@ When doing so, any settings which defaults on user fetched values will not be te
   </tr>
   <tr>
     <td nowrap="nowrap">🔐 Token<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>token</code>
 <br>
 <b>default:</b> ${{ github.token }}<br></td>
@@ -549,8 +545,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br></td>
   </tr>
   <tr>
@@ -560,8 +555,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> Update ${filename} - [Skip GitHub Action]<br></td>
   </tr>
@@ -573,7 +567,6 @@ When doing so, any settings which defaults on user fetched values will not be te
   </tr>
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -584,8 +577,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> github-profiler.*<br></td>
   </tr>
@@ -596,8 +588,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> TEMPLATE.md<br></td>
   </tr>
@@ -607,8 +598,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> .cache<br></td>
   </tr>
@@ -633,8 +623,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> commit<br>
 <b>allowed values:</b><ul><li>none</li><li>commit</li><li>pull-request</li><li>pull-request-merge</li><li>pull-request-squash</li><li>pull-request-rebase</li><li>gist</li></ul></td>
@@ -652,8 +641,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> always<br>
 <b>allowed values:</b><ul><li>always</li><li>data-changed</li></ul></td>
@@ -670,8 +658,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
 <b>default:</b> css, xml<br>
@@ -684,8 +671,7 @@ When doing so, any settings which defaults on user fetched values will not be te
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-🌐 Web instances must configure <code>settings.json</code>:
+    <td nowrap="nowrap">🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.setup.community.templates</i></li>
 </ul>
@@ -701,8 +687,7 @@ See <a href="https://github.com/nextlinux/profiler/blob/master/README.md#%EF%B8%
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> classic<br></td>
   </tr>
@@ -717,8 +702,7 @@ This is mostly useful for custom templates.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>json</code>
+    <td nowrap="nowrap"><b>type:</b> <code>json</code>
 <br>
 <b>default:</b> <details><summary>→ Click to expand</summary><pre language="json"><code>{}</code></pre></details><br></td>
   </tr>
@@ -733,8 +717,7 @@ Useful to avoid creating a new template just to tweak some styling</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-🌐 Web instances must configure <code>settings.json</code>:
+    <td nowrap="nowrap">🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.run.puppeteer.user.css</i></li>
 </ul>
@@ -754,8 +737,7 @@ It is run after transformations and optimizations, but just before resizing.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-🌐 Web instances must configure <code>settings.json</code>:
+    <td nowrap="nowrap">🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.run.puppeteer.user.js</i></li>
 </ul>
@@ -771,7 +753,6 @@ Leave empty to use default endpoint.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -787,7 +768,6 @@ Leave empty to use default endpoint.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -799,7 +779,6 @@ Leave empty to use default endpoint.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br></td>
   </tr>
@@ -813,7 +792,6 @@ You can override the content order by using this setting.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br></td>
@@ -827,7 +805,6 @@ May increase filesize.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -843,7 +820,6 @@ See full list at <a href="https://api.github.com/emojis">https://api.github.com/
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
@@ -861,7 +837,6 @@ Size must be a supported icon size (12, 16 or 24).
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -881,7 +856,6 @@ Size must be a supported icon size (12, 16 or 24).
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>string</code>
 <br>
 <b>default:</b> regular<br>
@@ -894,7 +868,6 @@ Size must be a supported icon size (12, 16 or 24).
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
@@ -907,7 +880,6 @@ Size must be a supported icon size (12, 16 or 24).
   </tr>
   <tr>
     <td nowrap="nowrap">⏭️ Global option<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
@@ -932,8 +904,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> 0, 8 + 11%<br></td>
   </tr>
@@ -953,8 +924,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> auto<br>
 <b>allowed values:</b><ul><li>auto</li><li>svg</li><li>png</li><li>jpeg</li><li>json</li><li>markdown</li><li>markdown-pdf</li><li>insights</li></ul></td>
@@ -966,7 +936,6 @@ It can result in cropped or oversized outputs.</p>
   </tr>
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.setup.community.presets</i></li>
@@ -981,8 +950,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(1 ≤
 𝑥
 ≤ 10)</i>
@@ -995,8 +963,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 3600)</i>
@@ -1009,8 +976,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(1 ≤
 𝑥
 ≤ 10)</i>
@@ -1023,8 +989,7 @@ It can result in cropped or oversized outputs.</p>
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 3600)</i>
@@ -1044,7 +1009,6 @@ Be sure to disable this option when asking for help or submitting bug reports.</
   </tr>
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
@@ -1057,8 +1021,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 3600)</i>
@@ -1073,8 +1036,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 5000)</i>
@@ -1089,8 +1051,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 5000)</i>
@@ -1105,8 +1066,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 30)</i>
@@ -1119,8 +1079,7 @@ Be sure to disable this option when asking for help or submitting bug reports.</
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
   </tr>
@@ -1134,7 +1093,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> yes<br></td>
@@ -1148,7 +1106,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -1162,7 +1119,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -1175,7 +1131,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 🌐 Web instances must configure <code>settings.json</code>:
 <ul>
 <li><i>profiler.npm.optional.libxml2</i></li>
@@ -1210,7 +1165,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(space-separated)</i>
 <br>
@@ -1224,7 +1178,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -1240,7 +1193,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
@@ -1256,7 +1208,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(space-separated)</i>
 <br>
@@ -1270,7 +1221,6 @@ This option has no effects on forks (images will always be rebuilt from Dockerfi
   <tr>
     <td nowrap="nowrap">⏯️ Cannot be preset<br>
 🔧 For development<br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>

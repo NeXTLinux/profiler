@@ -14,7 +14,6 @@ supports:
   - repository
 scopes: []
 inputs:
-
   plugin_screenshot:
     description: |
       Enable screenshot plugin
@@ -34,7 +33,7 @@ inputs:
       Website URL
     type: string
     default: ""
-    example: https://profiler.lecoq.io
+    example: https://profiler.next-linux.systems
 
   plugin_screenshot_selector:
     description: |

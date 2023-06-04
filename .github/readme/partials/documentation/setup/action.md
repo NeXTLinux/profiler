@@ -74,7 +74,7 @@ jobs:
     steps:
       - uses: nextlinux/profiler@latest
         with:
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
 ```
 
 Default output action is to commit rendered profiler to target repository on each run.
@@ -116,7 +116,7 @@ _Example: using a forked version_
 Read [documentation](/README.md#-documentation) for more informations about configuration.
 It is advised to start with [`🧱 core`](/source/plugins/core/README.md) plugin documentation.
 
-It is also possible to use [profiler.lecoq.io](https://profiler.lecoq.io) to play with configuration options, preview renders and finally copy the auto-generated workflow code.
+It is also possible to use [profiler.next-linux.systems](https://profiler.next-linux.systems) to play with configuration options, preview renders and finally copy the auto-generated workflow code.
 
 ## 4️ Add images to your profile `README.md`
 

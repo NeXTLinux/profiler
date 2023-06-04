@@ -1,7 +1,7 @@
 - name: 🧠 16personalities - MBTI Personality profile
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_16personalities: 'yes'
     plugin_16personalities_url: https://www.16personalities.com/profiles/b7d9f29453ea5
     plugin_16personalities_sections: personality, traits

@@ -32,7 +32,7 @@ uses: nextlinux/profiler@latest
 with:
   template: terminal
   filename: profiler.terminal.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: header, metadata
 
 ```
