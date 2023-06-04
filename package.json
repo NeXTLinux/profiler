@@ -49,7 +49,7 @@
     "d3": "^7.8.3",
     "degenerator": "^4.0.2",
     "ejs": "^3.1.9",
-    "emittery": "^0.13.1",
+    "emittery": "^1.0.0",
     "emoji-name-map": "^1.2.9",
     "esm": "^3.2.25",
     "execa": "^5.1.1",
