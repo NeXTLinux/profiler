@@ -1,7 +1,7 @@
 - name: 📕 Community templates - Using a community template
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     template: "@classic"
     setup_community_templates: nextlinux/profiler@master:classic
     use_mocked_data: yes
@@ -11,7 +11,7 @@
 - name: 📕 Community templates - Using a trusted community template
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     template: "@terminal"
     setup_community_templates: nextlinux/profiler@master:terminal+trust
     use_mocked_data: yes

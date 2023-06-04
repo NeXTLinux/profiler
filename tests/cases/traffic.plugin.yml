@@ -1,7 +1,7 @@
 - name: 🧮 Repositories traffic - Repositories traffic
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     base: repositories
     plugin_traffic: 'yes'
     use_mocked_data: 'yes'

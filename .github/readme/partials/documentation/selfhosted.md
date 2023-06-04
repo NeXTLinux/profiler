@@ -34,7 +34,7 @@ runs-on: self-hosted
 steps:
   - uses: nextlinux/profiler@latest
     with:
-      token: ${{ secrets.profiler_TOKEN }}
+      token: ${{ secrets.PROFILER_TOKEN }}
 ```
 
 > 💡 To easily debug workflow errors, use [`debug: yes`](https://github.com/nextlinux/profiler/tree/master/source/plugins/core#debug) option

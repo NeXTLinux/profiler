@@ -45,8 +45,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -56,8 +55,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(1 ≤
 𝑥
 ≤ 128)</i>
@@ -70,8 +68,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(100 ≤
 𝑥
 ≤ 1000)</i>
@@ -84,8 +81,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(0 ≤
 𝑥
 ≤ 365)</i>
@@ -100,8 +96,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> public<br>
 <b>allowed values:</b><ul><li>public</li><li>all</li></ul></td>
@@ -113,7 +108,6 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
   </tr>
   <tr>
     <td nowrap="nowrap">⏩ Inherits <code>repositories_skipped</code><br>
-✨ On <code>master</code>/<code>main</code><br>
 <b>type:</b> <code>array</code>
 <i>(newline-separated)</i>
 <br></td>
@@ -124,8 +118,7 @@ Use at your own risk, <em>profiler</em> and its authors cannot be held responsib
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br></td>
   </tr>
@@ -140,7 +133,7 @@ name: JavaScript or TypeScript snippet of the day
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.code.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: ""
   plugin_code: yes
   plugin_code_languages: javascript, typescript

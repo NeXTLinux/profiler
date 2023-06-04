@@ -153,7 +153,7 @@ with:
   markdown: >-
     https://raw.githubusercontent.com/nextlinux/profiler/examples/profiler.markdown.template.md
   config_output: markdown
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 ```yaml
@@ -186,7 +186,7 @@ with:
   plugin_topics_limit: 24
   plugin_isocalendar: yes
   plugin_languages: yes
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 ```yaml
@@ -204,7 +204,7 @@ with:
   plugin_isocalendar: yes
   config_twemoji: yes
   config_padding: 5%
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
 
 ```
 <!--/examples-->

@@ -2,14 +2,14 @@
   uses: nextlinux/profiler@latest
   with:
     user: github
-    token: undefined
+    token: MOCKED_TOKEN
     base: header, repositories
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🧱 Core - Large display
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     config_display: large
     use_mocked_data: 'yes'
     verify: 'yes'
@@ -17,7 +17,7 @@
   if: ${{ success() || failure() }}
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     config_output: json
     use_mocked_data: 'yes'
     verify: 'yes'
@@ -25,7 +25,7 @@
   if: ${{ success() || failure() }}
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     config_output: png
     use_mocked_data: 'yes'
     verify: 'yes'
@@ -33,14 +33,14 @@
   if: ${{ success() || failure() }}
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     config_output: insights
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🧱 Core - Presets
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     base: header, repositories
     config_presets: >-
       https://raw.githubusercontent.com/nextlinux/profiler/presets/lunar-red/preset.yaml

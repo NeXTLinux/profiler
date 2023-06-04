@@ -1,6 +1,6 @@
 - name: 📜 Repository licenses - Licenses and permissions
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     template: repository
     repo: profiler
     plugin_licenses: 'yes'

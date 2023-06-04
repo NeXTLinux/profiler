@@ -1,14 +1,14 @@
 - name: 📆 Commit calendar - Current year calendar
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_calendar: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 📆 Commit calendar - Full history calendar
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_calendar: 'yes'
     plugin_calendar_limit: 0
     use_mocked_data: 'yes'

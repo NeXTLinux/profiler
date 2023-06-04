@@ -29,7 +29,8 @@ To use a repository template, a `repo` handle must be provided.
 
 If the token owner is not the repository owner, then the `user` option must be set to the repository owner (whether it is an user or organization account).
 
-*Example: render `nextlinux/profiler` repository*
+_Example: render `nextlinux/profiler` repository_
+
 ```yml
 - uses: nextlinux/profiler@latest
   with:
@@ -47,7 +48,7 @@ uses: nextlinux/profiler@latest
 with:
   template: repository
   filename: profiler.repository.svg
-  token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+  token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
   user: nextlinux
   repo: profiler
   plugin_lines: yes

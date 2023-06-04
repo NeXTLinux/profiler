@@ -2,7 +2,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.code.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_code: yes
     plugin_code_languages: javascript, typescript

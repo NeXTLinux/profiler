@@ -74,7 +74,7 @@ jobs:
     steps:
       - uses: nextlinux/profiler@latest
         with:
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
 ```
 
 Default output action is to commit rendered profiler to target repository on each run.

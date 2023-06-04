@@ -40,8 +40,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -60,8 +59,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <br>
 <b>zero behaviour:</b> disable</br>
 <b>default:</b> 1<br></td>
@@ -77,7 +75,7 @@ name: Current year calendar
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.calendar.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: ""
   plugin_calendar: yes
 
@@ -87,7 +85,7 @@ name: Full history calendar
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.calendar.full.svg
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   base: ""
   plugin_calendar: yes
   plugin_calendar_limit: 0

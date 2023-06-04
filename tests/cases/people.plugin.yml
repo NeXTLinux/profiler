@@ -1,7 +1,7 @@
 - name: 🧑‍🤝‍🧑 People - Followers
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_people: 'yes'
     plugin_people_types: followers
     use_mocked_data: 'yes'
@@ -9,7 +9,7 @@
 - name: 🧑‍🤝‍🧑 People - Contributors and sponsors
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     template: repository
     repo: profiler
     plugin_people: 'yes'

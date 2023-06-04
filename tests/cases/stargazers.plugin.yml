@@ -1,14 +1,14 @@
 - name: ✨ Stargazers - Using classic charts
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_stargazers: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: ✨ Stargazers - Using graph charts
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_stargazers: 'yes'
     plugin_stargazers_charts_type: graph
     use_mocked_data: 'yes'
@@ -16,7 +16,7 @@
 - name: ✨ Stargazers - With worldmap
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_stargazers: 'yes'
     plugin_stargazers_charts: 'no'
     plugin_stargazers_worldmap: 'yes'

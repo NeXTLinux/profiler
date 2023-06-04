@@ -1,14 +1,14 @@
 - name: 🎩 Notable contributions - Contributions
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_notable: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'
 - name: 🎩 Notable contributions - Indepth analysis
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_notable: 'yes'
     plugin_notable_indepth: 'yes'
     plugin_notable_repositories: 'yes'

@@ -2,7 +2,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.languages.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_languages: yes
     plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
@@ -12,7 +12,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.languages.details.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_languages: yes
     plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
@@ -23,7 +23,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.languages.recent.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_languages: yes
     plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
@@ -35,7 +35,7 @@
   uses: nextlinux/profiler@latest
   with:
     filename: profiler.plugin.languages.indepth.svg
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     base: ""
     plugin_languages: yes
     plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot

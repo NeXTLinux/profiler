@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
   workflow_call:
     secrets:
-      profiler_TOKEN:
+      PROFILER_TOKEN:
         required: true
-      profiler_TOKEN_WITH_SCOPES:
+      PROFILER_TOKEN_WITH_SCOPES:
         required: true
-      profiler_TOKEN_PERSONAL:
+      PROFILER_TOKEN_PERSONAL:
         required: true
       CHESS_TOKEN:
         required: true
@@ -33,14 +33,13 @@ on:
       WAKATIME_TOKEN:
         required: true
 jobs:
-
-# ======================================================================================
-# Examples renders
-# ======================================================================================
+  # ======================================================================================
+  # Examples renders
+  # ======================================================================================
 
   examples:
     runs-on: ubuntu-latest
-    if: "github.repository == 'nextlinux/profiler'"
+    if: github.repository == 'nextlinux/profiler'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -53,7 +52,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.base.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: header, activity, community, repositories, metadata
           output_action: none
           delay: 120
@@ -65,7 +64,7 @@ jobs:
         with:
           filename: profiler.organization.svg
           user: github
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           base: header, repositories
           output_action: none
           delay: 120
@@ -75,7 +74,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.large.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           config_display: large
           output_action: none
           delay: 120
@@ -87,7 +86,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.example.json
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           config_output: json
           output_action: none
           delay: 120
@@ -98,7 +97,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.example.png
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           config_output: png
           output_action: none
           delay: 120
@@ -109,7 +108,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.insights.html
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           config_output: insights
           output_action: none
           delay: 120
@@ -119,7 +118,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.error.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_projects: yes
           plugins_errors_fatal: no
@@ -131,7 +130,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.isocalendar.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_isocalendar: yes
           output_action: none
@@ -143,7 +142,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.isocalendar.fullyear.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
@@ -156,7 +155,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.languages.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_languages: yes
           plugin_languages_ignored: >-
@@ -172,7 +171,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.languages.details.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_languages: yes
           plugin_languages_ignored: >-
@@ -189,7 +188,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.languages.recent.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_languages: yes
           plugin_languages_ignored: >-
@@ -207,7 +206,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.languages.indepth.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_languages: yes
           plugin_languages_ignored: >-
@@ -226,7 +225,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.stargazers.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_stargazers: yes
           output_action: none
@@ -238,7 +237,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.stargazers.graph.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_stargazers: yes
           plugin_stargazers_charts_type: graph
@@ -251,7 +250,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.stargazers.worldmap.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_stargazers: yes
           plugin_stargazers_charts: no
@@ -267,7 +266,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.lines.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: repositories
           plugin_lines: yes
           output_action: none
@@ -279,7 +278,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.lines.history.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_lines: yes
           plugin_lines_sections: repositories, history
@@ -325,7 +324,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.stars.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_stars: yes
           plugin_stars_limit: 3
@@ -337,7 +336,7 @@ jobs:
       - name: 📜 Repository licenses - Licenses and permissions
         with:
           filename: profiler.plugin.licenses.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           repo: profiler
@@ -353,7 +352,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.licenses.ratio.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           repo: profiler
@@ -370,7 +369,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.habits.facts.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_habits: yes
           plugin_habits_facts: yes
@@ -385,7 +384,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.habits.charts.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_habits: yes
           plugin_habits_facts: no
@@ -400,7 +399,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.contributors.contributions.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           repo: profiler
@@ -415,7 +414,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.contributors.categories.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           repo: profiler
@@ -436,7 +435,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.followup.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_followup: yes
           output_action: none
@@ -448,7 +447,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.followup.user.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_followup: yes
           plugin_followup_sections: user
@@ -461,7 +460,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.followup.indepth.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_followup: yes
           plugin_followup_indepth: yes
@@ -474,7 +473,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.reactions.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_reactions: yes
           plugin_reactions_limit: 100
@@ -488,7 +487,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.people.followers.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_people: yes
           plugin_people_types: followers
@@ -501,7 +500,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.people.repository.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           repo: profiler
@@ -516,7 +515,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.sponsorships.svg
-          token: ${{ secrets.profiler_TOKEN_PERSONAL }}
+          token: ${{ secrets.PROFILER_TOKEN_PERSONAL }}
           base: ""
           plugin_sponsorships: yes
           output_action: none
@@ -528,7 +527,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.sponsors.svg
-          token: ${{ secrets.profiler_TOKEN_PERSONAL }}
+          token: ${{ secrets.PROFILER_TOKEN_PERSONAL }}
           base: ""
           plugin_sponsors: yes
           plugin_sponsors_sections: goal, list
@@ -542,7 +541,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.sponsors.full.svg
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           base: ""
           plugin_sponsors: yes
           output_action: none
@@ -554,7 +553,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.repositories.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_repositories: yes
           plugin_repositories_featured: nextlinux/profiler
@@ -567,7 +566,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.repositories.pinned.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_repositories: yes
           plugin_repositories_pinned: 2
@@ -580,7 +579,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.discussions.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_discussions: yes
           plugin_discussions_categories_limit: 8
@@ -623,7 +622,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.calendar.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_calendar: yes
           output_action: none
@@ -635,7 +634,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.calendar.full.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_calendar: yes
           plugin_calendar_limit: 0
@@ -648,7 +647,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.achievements.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_achievements: yes
           plugin_achievements_only: sponsor, maintainer, octonaut
@@ -661,7 +660,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.achievements.compact.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_achievements: yes
           plugin_achievements_only: >-
@@ -678,7 +677,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.notable.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_notable: yes
           output_action: none
@@ -690,7 +689,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.notable.indepth.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_notable: yes
           plugin_notable_indepth: yes
@@ -704,7 +703,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.activity.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_activity: yes
           plugin_activity_limit: 5
@@ -719,7 +718,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.traffic.svg
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           base: repositories
           plugin_traffic: yes
           output_action: none
@@ -731,7 +730,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.code.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_code: yes
           plugin_code_languages: javascript, typescript
@@ -745,7 +744,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.gists.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_gists: yes
           output_action: none
@@ -757,7 +756,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.projects.svg
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           base: ""
           plugin_projects: yes
           plugin_projects_repositories: nextlinux/profiler/projects/1
@@ -771,7 +770,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.introduction.svg
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           user: github
           base: header
           plugin_introduction: yes
@@ -783,7 +782,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.introduction.repository.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           template: repository
           repo: profiler
           base: header
@@ -1164,7 +1163,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.plugin.16personalities.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           plugin_16personalities: yes
           plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
@@ -1234,7 +1233,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.classic.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: header, repositories
           plugin_lines: yes
           output_action: none
@@ -1247,7 +1246,7 @@ jobs:
         with:
           template: repository
           filename: profiler.repository.svg
-          token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
           user: nextlinux
           repo: profiler
           plugin_lines: yes
@@ -1263,7 +1262,7 @@ jobs:
         with:
           template: terminal
           filename: profiler.terminal.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: header, metadata
           output_action: none
           delay: 120
@@ -1278,7 +1277,7 @@ jobs:
           markdown: >-
             https://raw.githubusercontent.com/nextlinux/profiler/examples/profiler.markdown.template.md
           config_output: markdown
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           output_action: commit
           committer_branch: examples
           delay: 120
@@ -1314,7 +1313,7 @@ jobs:
           plugin_topics_limit: 24
           plugin_isocalendar: yes
           plugin_languages: yes
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           output_action: commit
           committer_branch: examples
           delay: 120
@@ -1335,7 +1334,7 @@ jobs:
           plugin_isocalendar: yes
           config_twemoji: yes
           config_padding: 5%
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           output_action: commit
           committer_branch: examples
           delay: 120
@@ -1345,7 +1344,7 @@ jobs:
       - name: 📕 Community templates - Using a community template
         uses: nextlinux/profiler@master
         with:
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           template: "@classic"
           setup_community_templates: nextlinux/profiler@master:classic
           output_action: none
@@ -1356,7 +1355,7 @@ jobs:
       - name: 📕 Community templates - Using a trusted community template
         uses: nextlinux/profiler@master
         with:
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           template: "@terminal"
           setup_community_templates: nextlinux/profiler@master:terminal+trust
           output_action: none
@@ -1364,7 +1363,6 @@ jobs:
           user: nextlinux
           plugins_errors_fatal: yes
         if: ${{ success() || failure() }}
-
 
       - name: Screenshot markdown example
         if: ${{ success() || failure() }}
@@ -1385,14 +1383,14 @@ jobs:
           git commit -m "chore: update examples"
           git push --force
 
-# ======================================================================================
-# Special job used to render nextlinux/profiler repository assets
-# ======================================================================================
+  # ======================================================================================
+  # Special job used to render nextlinux/profiler repository assets
+  # ======================================================================================
 
   repository:
     runs-on: ubuntu-latest
-    needs: [ examples ]
-    if: "github.repository == 'nextlinux/profiler'"
+    needs: [examples]
+    if: github.repository == 'nextlinux/profiler'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -1406,7 +1404,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.contributors.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           user: nextlinux
@@ -1422,7 +1420,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.sponsors.svg
-          token: ${{ secrets.profiler_TOKEN_PERSONAL }}
+          token: ${{ secrets.PROFILER_TOKEN_PERSONAL }}
           base: ""
           user: nextlinux
           plugin_sponsors: yes
@@ -1438,7 +1436,7 @@ jobs:
         uses: nextlinux/profiler@master
         with:
           filename: profiler.licenses.svg
-          token: ${{ secrets.profiler_TOKEN }}
+          token: ${{ secrets.PROFILER_TOKEN }}
           base: ""
           template: repository
           user: nextlinux

@@ -1,0 +1,18 @@
+{
+  "rewrites":[
+    {"source": "/.uncache", "destination": "https://profiler.next-linux.systems/.uncache"},
+    {"source": "/.requests", "destination": "https://profiler.next-linux.systems/.requests"},
+    {"source": "/.templates", "destination": "/.templates__"},
+    {"source": "/.templates/:template", "destination": "/.templates_/:template"},
+    {"source": "/about/query/:login", "destination": "https://profile.next-linux.systems/about/query/:login"},
+    {"source": "/about/query/:login/:plugin", "destination": "https://profiler.next-linux.systems/about/query/:login/:plugin"},
+    {"source": "/insights/query/:login", "destination": "https://profiler.next-linux.systems/insights/query/:login"},
+    {"source": "/insights/query/:login/:plugin", "destination": "https://profiler.next-linux.systems/insights/query/:login/:plugin"},
+    {"source": "/:login([-\\w]+)", "destination": "https://profiler.next-linux.systems/:login"},
+    {"source": "/:login([-\\w]+)/:repository([-\\w]+)", "destination": "https://profiler.next-linux.systems/:login/:repository"}
+  ],
+  "github":{
+    "silent": true,
+    "autoJobCancelation": true
+  }
+}

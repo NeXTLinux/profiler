@@ -1,7 +1,7 @@
 - name: 🌟 Recently starred repositories - Recently starred
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_stars: 'yes'
     plugin_stars_limit: 3
     use_mocked_data: 'yes'

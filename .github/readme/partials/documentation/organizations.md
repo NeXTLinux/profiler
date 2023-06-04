@@ -18,7 +18,7 @@ _Example: render profiler for `github` organization_
 ```yaml
 - uses: nextlinux/profiler@latest
   with:
-    token: ${{ secrets.profiler_TOKEN }}
+    token: ${{ secrets.PROFILER_TOKEN }}
     user: github
 ```
 

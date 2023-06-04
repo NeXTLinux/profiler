@@ -1,7 +1,7 @@
 - name: 📰 Recent activity - Recent activity
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_activity: 'yes'
     plugin_activity_limit: 5
     plugin_activity_days: 0

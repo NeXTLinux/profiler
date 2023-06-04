@@ -40,8 +40,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -56,8 +55,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>array</code>
+    <td nowrap="nowrap"><b>type:</b> <code>array</code>
 <i>(comma-separated)</i>
 <br>
 <b>default:</b> goal, list, about<br>
@@ -73,8 +71,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>boolean</code>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
 <br>
 <b>default:</b> no<br></td>
   </tr>
@@ -84,8 +81,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>number</code>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
 <i>(8 ≤
 𝑥
 ≤ 64)</i>
@@ -98,8 +94,7 @@ All product and company names are trademarks™ or registered® trademarks of th
 <img width="900" height="1" alt=""></td>
   </tr>
   <tr>
-    <td nowrap="nowrap">✨ On <code>master</code>/<code>main</code><br>
-<b>type:</b> <code>string</code>
+    <td nowrap="nowrap"><b>type:</b> <code>string</code>
 <br>
 <b>default:</b> Sponsor Me!<br></td>
   </tr>
@@ -114,7 +109,7 @@ name: Sponsors goal
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.sponsors.svg
-  token: ${{ secrets.profiler_TOKEN_PERSONAL }}
+  token: ${{ secrets.PROFILER_TOKEN_PERSONAL }}
   base: ""
   plugin_sponsors: yes
   plugin_sponsors_sections: goal, list
@@ -126,7 +121,7 @@ name: Sponsors introduction
 uses: nextlinux/profiler@latest
 with:
   filename: profiler.plugin.sponsors.full.svg
-  token: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
+  token: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
   base: ""
   plugin_sponsors: yes
 

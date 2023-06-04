@@ -1,7 +1,7 @@
 - name: 🎫 Gists - Gists
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_gists: 'yes'
     use_mocked_data: 'yes'
     verify: 'yes'

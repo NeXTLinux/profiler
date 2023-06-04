@@ -2,7 +2,7 @@
   <tr><th colspan="2"><h3>📕 Community templates</h3></th></tr>
   <tr><td colspan="2" align="center">
 
-  Community templates are a way to use official releases of [nextlinux/profiler](https://github.com/nextlinux/profiler) while using templates from external repositories (owned or not).
+Community templates are a way to use official releases of [nextlinux/profiler](https://github.com/nextlinux/profiler) while using templates from external repositories (owned or not).
 
   </td></tr>
 </table>
@@ -10,13 +10,15 @@
 ## 📮 Using community templates
 
 Use `setup_community_templates` option to specify additional external sources using following format:
+
 ```
 user/repo@branch:template
 ```
 
 These templates will be downloaded through git and will be usable by prefixing their name with an `@`.
 
-*Example: using `my-theme` template by downloading it from `user/repo`*
+_Example: using `my-theme` template by downloading it from `user/repo`_
+
 ```yml
 - uses: nextlinux/profiler@latest
   with:
@@ -27,7 +29,8 @@ These templates will be downloaded through git and will be usable by prefixing t
 For security reasons, community templates will use the `classic` template `template.mjs` instead of their own.
 If you trust a community template, append `+trust` to it.
 
-*Example: using and trusting `my-theme` template by downloading it from `user/repo`*
+_Example: using and trusting `my-theme` template by downloading it from `user/repo`_
+
 ```yml
 - uses: nextlinux/profiler@latest
   with:
@@ -39,7 +42,8 @@ If you trust a community template, append `+trust` to it.
 
 Some templates may accept additional custom parameters that can be passed through the `query` option, using a JSON formatted string.
 
-*Example: using and trusting `my-theme` template by downloading it from `user/repo`*
+_Example: using and trusting `my-theme` template by downloading it from `user/repo`_
+
 ```yaml
 - uses: nextlinux/profiler@latest
   with:
@@ -57,7 +61,7 @@ Some templates may accept additional custom parameters that can be passed throug
 name: Using a community template
 uses: nextlinux/profiler@latest
 with:
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   template: "@classic"
   setup_community_templates: nextlinux/profiler@master:classic
 
@@ -66,7 +70,7 @@ with:
 name: Using a trusted community template
 uses: nextlinux/profiler@latest
 with:
-  token: ${{ secrets.profiler_TOKEN }}
+  token: ${{ secrets.PROFILER_TOKEN }}
   template: "@terminal"
   setup_community_templates: nextlinux/profiler@master:terminal+trust
 
@@ -80,6 +84,7 @@ Templates creation requires you to be comfortable with HTML, CSS and [EJS](https
 ### 💬 Quick-start
 
 To create a new template, clone and setup this repository first:
+
 ```shell
 git clone https://github.com/nextlinux/profiler.git
 cd profiler/
@@ -87,18 +92,20 @@ npm install
 ```
 
 Find a cool name for your new template and run the following:
+
 ```shell
 npm run quickstart template <template_name>
 ```
 
 It will create a new directory in `/source/templates` with the following file structure:
-* `/source/templates/{template-name}`
-  * `README.md`
-  * `metadata.yml`
-  * `image.svg`
-  * `partials/`
-    * `_.json`
-    * `*.ejs`
+
+- `/source/templates/{template-name}`
+  - `README.md`
+  - `metadata.yml`
+  - `image.svg`
+  - `partials/`
+    - `_.json`
+    - `*.ejs`
 
 Templates are auto-loaded based on their folder existence, so there's no need to register them somewhere.
 
@@ -107,21 +114,32 @@ Templates are auto-loaded based on their folder existence, so there's no need to
 Usually `image.svg` doesn't need to be edited too much, but let's explain it how it works.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="99999" class="<%= !animated ? 'no-animations' : '' %>">
-
-  <defs><style><%= fonts %></style></defs>
-  <style data-optimizable="true"><%= style %></style>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="480"
+  height="99999"
+  class="<%= !animated ? 'no-animations' : '' %>"
+>
+  <defs>
+    <style>
+      <%= fonts %>
+    </style>
+  </defs>
+  <style data-optimizable="true">
+    <%= style %>
+  </style>
 
   <foreignObject x="0" y="0" width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <% for (const partial of [...partials]) { %>
-        <%- await include(`partials/${partial}.ejs`) %>
-      <% } %>
+    <div
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <% for (const partial of [...partials]) { %> <%- await
+      include(`partials/${partial}.ejs`) %> <% } %>
 
       <div id="profiler-end"></div>
     </div>
   </foreignObject>
-
 </svg>
 ```
 
@@ -154,6 +172,7 @@ It is used to compute height dynamically through a [puppeteer](https://github.co
 `metadata.yml` is a required file which describes supported account types, output formats, scopes, etc.
 
 The default file looks like below:
+
 ```yaml
 name: 🖼️ Template name
 extends: classic
@@ -174,11 +193,11 @@ formats:
   - markdown-pdf
 ```
 
-> 💡 It is important to correctly define `metadata.yml` because *profiler* will use its content for various usage
+> 💡 It is important to correctly define `metadata.yml` because _profiler_ will use its content for various usage
 
 [`🧱 core`](/source/plugins/core/README.md) plugin (which is always called) will automatically verify user inputs against `supports` and `formats` values and throw an error in case of incompatibility.
 
-`extends` is used to define the fallback for `template.mjs` when a template is not trusted by user (depending  on whether you're building an user/organization or repository template, it is advised to either use `classic` or `repository`).
+`extends` is used to define the fallback for `template.mjs` when a template is not trusted by user (depending on whether you're building an user/organization or repository template, it is advised to either use `classic` or `repository`).
 
 `name`, `description` and `examples` are used to auto-generate documentation in the `README.md`.
 
@@ -193,6 +212,7 @@ Workflow examples from `examples.yml` are used to auto-generate documentation in
 Most of it will is auto-generated by `metadata.yml` and `examples.yml` content, so usually it is not required to manually edit it.
 
 The default content looks like below:
+
 ```markdown
 <ǃ--header-->
 <ǃ--/header-->
@@ -213,6 +233,7 @@ Just create a new `.ejs` file in `partials` folder, and reference it into `parti
 It should be able to handle gracefully plugins state and errors.
 
 Below is a minimal snippet of a partial:
+
 ```ejs
 <% if (plugins.{plugin_name}) { %>
   <% if (plugins.{plugin_name}.error) { %>
@@ -230,11 +251,12 @@ Partials should have the match the same name as plugin handles, as they're used 
 > ⚠️ This significantly increases rendered profiler filesize and thus not recommended. You should restrict charset when using this feature
 
 Here's a quick step-by-step tutorial to create base64 encoded fonts:
+
 - 1. Find a font on [fonts.google.com](https://fonts.google.com)
-    - Select regular, bold, italic and bold+italic fonts
-    - Open `embed` tab and extract `href`
+  - Select regular, bold, italic and bold+italic fonts
+  - Open `embed` tab and extract `href`
 - 2. Open extracted `href` in a browser and append `&text=` parameter with list of used characters
-    - e.g. `&text=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`
+  - e.g. `&text=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`
 - 3. Download each font file from urls present in generated stylesheet
 - 4. Convert them into base64 with `woff` format on [transfonter.org](https://transfonter.org)
 - 5. Download archive and extract it

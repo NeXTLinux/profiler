@@ -2,21 +2,20 @@ name: Continuous integration
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-
   # Build, test and analyze
   build-test-analyze:
     name: Build, test and analyze
-    if: "!contains(github.event.head_commit.message, '[skip test]')"
+    if: '"!contains(github.event.head_commit.message, [skip test])"'
     uses: nextlinux/profiler/.github/workflows/test.yml@master
 
   # Format code
   format:
     name: Format code
     runs-on: ubuntu-latest
-    needs: [ build-test-analyze ]
+    needs: [build-test-analyze]
     if: always() && (needs.build-test-analyze.result == 'success' || needs.build-test-analyze.result == 'skipped')
     steps:
       - name: Checkout repository
@@ -44,7 +43,7 @@ jobs:
   update-indexes:
     name: Publish rebuilt profiler indexes
     runs-on: ubuntu-latest
-    needs: [ format ]
+    needs: [format]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -67,7 +66,7 @@ jobs:
   update-main:
     name: Rebase main on master
     runs-on: ubuntu-latest
-    needs: [ update-indexes ]
+    needs: [update-indexes]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -90,7 +89,7 @@ jobs:
   docker-master:
     name: Publish master to GitHub registry
     runs-on: ubuntu-latest
-    needs: [ update-indexes ]
+    needs: [update-indexes]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -103,13 +102,13 @@ jobs:
       - name: Tag docker image (beta) and publish to GitHub registry
         run: |
           set +e
-          profiler_VERSION=$(cat package.json | grep -Po '(?<="version": ")\d+[.]\d+(?=[.]0-beta")')
-          profiler_VERSION_BETA="$profiler_VERSION-beta"
+          METRICS_VERSION=$(cat package.json | grep -Po '(?<="version": ")\d+[.]\d+(?=[.]0-beta")')
+          METRICS_VERSION_BETA="$METRICS_VERSION-beta"
           set -e
-          if [[ ! -z "$profiler_VERSION" ]]; then
-            echo "Beta version: v$profiler_VERSION_BETA"
-            docker tag ghcr.io/nextlinux/profiler:master ghcr.io/nextlinux/profiler:$(echo "v$profiler_VERSION_BETA")
-            docker push ghcr.io/nextlinux/profiler:$(echo "v$profiler_VERSION_BETA")
+          if [[ ! -z "$METRICS_VERSION" ]]; then
+            echo "Beta version: v$METRICS_VERSION_BETA"
+            docker tag ghcr.io/nextlinux/profiler:master ghcr.io/nextlinux/profiler:$(echo "v$METRICS_VERSION_BETA")
+            docker push ghcr.io/nextlinux/profiler:$(echo "v$METRICS_VERSION_BETA")
           fi
       - name: Tag docker image (main) and publish to GitHub registry
         run: |
@@ -120,7 +119,7 @@ jobs:
   deploy-master:
     name: Deploy nextlinux/profiler@master
     runs-on: ubuntu-latest
-    needs: [ docker-master ]
+    needs: [docker-master]
     steps:
       - name: Deploy web instance
         run: "curl -X POST -H 'Authorization: ${{ secrets.WEB_DEPLOY_BETA_TOKEN }}' https://beta-profiler.next-linux.systems/.control/stop"
@@ -133,7 +132,7 @@ jobs:
   action-master-test:
     name: Test nextlinux/profiler@master
     runs-on: ubuntu-latest
-    needs: [ docker-master ]
+    needs: [docker-master]
     steps:
       - name: Run tests
         uses: nextlinux/profiler@master
@@ -147,12 +146,12 @@ jobs:
   # Publish examples
   publish-examples:
     name: Publish examples
-    needs: [ action-master-test ]
+    needs: [action-master-test]
     uses: nextlinux/profiler/.github/workflows/examples.yml@master
     secrets:
-      profiler_TOKEN: ${{ secrets.profiler_TOKEN }}
-      profiler_TOKEN_WITH_SCOPES: ${{ secrets.profiler_TOKEN_WITH_SCOPES }}
-      profiler_TOKEN_PERSONAL: ${{ secrets.profiler_TOKEN_PERSONAL }}
+      PROFILER_TOKEN: ${{ secrets.PROFILER_TOKEN }}
+      PROFILER_TOKEN_WITH_SCOPES: ${{ secrets.PROFILER_TOKEN_WITH_SCOPES }}
+      PROFILER_TOKEN_PERSONAL: ${{ secrets.PROFILER_TOKEN_PERSONAL }}
       CHESS_TOKEN: ${{ secrets.CHESS_TOKEN }}
       PAGESPEED_TOKEN: ${{ secrets.PAGESPEED_TOKEN }}
       GOOGLE_MAP_TOKEN: ${{ secrets.GOOGLE_MAP_TOKEN }}
@@ -167,14 +166,14 @@ jobs:
   # Publish examples (presets)
   publish-examples-presets:
     name: Publish examples (presets)
-    needs: [ action-master-test ]
+    needs: [action-master-test]
     uses: nextlinux/profiler/.github/workflows/examples.presets.yml@master
 
   # Build docker image from master and publish it to GitHub registry with release tag
   docker-release:
     name: Publish release to GitHub registry
     runs-on: ubuntu-latest
-    needs: [ publish-examples ]
+    needs: [publish-examples]
     if: contains(github.event.head_commit.message, '[release]')
     steps:
       - name: Checkout repository
@@ -196,7 +195,7 @@ jobs:
   update-latest:
     name: Rebase latest on master
     runs-on: ubuntu-latest
-    needs: [ docker-release ]
+    needs: [docker-release]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -221,7 +220,7 @@ jobs:
   action-latest-test:
     name: Test nextlinux/profiler@latest
     runs-on: ubuntu-latest
-    needs: [ update-latest ]
+    needs: [update-latest]
     steps:
       - name: Run tests
         uses: nextlinux/profiler@latest
@@ -236,7 +235,7 @@ jobs:
   deploy-latest:
     name: Deploy nextlinux/profiler@latest
     runs-on: ubuntu-latest
-    needs: [ docker-release, deploy-master ]
+    needs: [docker-release, deploy-master]
     steps:
       - name: Deploy web instance
         run: "curl -X POST -H 'Authorization: ${{ secrets.WEB_DEPLOY_TOKEN }}' https://profiler.next-linux.systems/.control/stop"
@@ -249,7 +248,7 @@ jobs:
   publish-release:
     name: Publish release
     runs-on: ubuntu-latest
-    needs: [ action-latest-test, deploy-latest ]
+    needs: [action-latest-test, deploy-latest]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

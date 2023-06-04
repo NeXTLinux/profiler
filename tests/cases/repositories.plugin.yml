@@ -1,7 +1,7 @@
 - name: 📓 Featured repositories - Featured repositories
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_repositories: 'yes'
     plugin_repositories_featured: nextlinux/profiler
     use_mocked_data: 'yes'
@@ -9,7 +9,7 @@
 - name: 📓 Featured repositories - Pinned repositories
   uses: nextlinux/profiler@latest
   with:
-    token: undefined
+    token: MOCKED_TOKEN
     plugin_repositories: 'yes'
     plugin_repositories_pinned: 2
     use_mocked_data: 'yes'
