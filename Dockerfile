@@ -1,5 +1,5 @@
 # Base image
-FROM node:17.3-bullseye-slim
+FROM node:17.9-bullseye-slim
 
 # Copy repository
 COPY . /profiler
