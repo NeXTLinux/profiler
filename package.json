@@ -31,7 +31,7 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^8.0.2",
     "@octokit/graphql": "^5.0.5",
     "@octokit/rest": "^19.0.7",
     "@primer/css": "^21.0.0",
