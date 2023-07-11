@@ -966,7 +966,7 @@
     "@primer/primitives" "^7.11.10"
     "@primer/view-components" "^0.1.0"
 
-"@primer/octicons@^19.2.0":
+"@primer/octicons@^19.4.0":
   version "19.4.0"
   resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-19.4.0.tgz#6803d0d13812df2d1cfb2022b179d0a22a9c0913"
   integrity sha512-92eXALm3ucZkzqpJmJbC+fR9ldiuNd4W4s2MZQNQIBahpg14emJ+I9fdHqCummFlfgyohLzXn++7rz0NlkqAJA==
